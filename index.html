@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp App</title>
+</head>
+<style>
+    body {
+        display: grid;
+        place-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+    }
+    
+    .cont {
+        border: 2px solid red;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: clamp(300px, 50vw, 700px);
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    
+    input {
+        font-size: 2rem;
+        width: 7rem;
+        text-align: center;
+        height: 5re;
+        height: 5rem;
+    }
+</style>
+
+<body>
+    <div class="cont">
+        <div class="farhenhite box">
+            <label for="F">Farhenhite</label>
+            <input type="number" name="" id="F">
+        </div>
+        <div class="celcius box">
+            <label for="C">Celcius</label>
+            <input type="number" name="" id="C">
+        </div>
+    </div>
+</body>
+<script>
+    let F = document.getElementById("F");
+    let C = document.getElementById("C");
+
+    F.addEventListener("input", function() {
+        // C.value = F.value;
+
+
+
+        if (F.value == '') {
+            C.value = F.value;
+        } else {
+            let temp = (F.value - 32) * (5 / 9);
+            C.value = temp.toFixed(2);
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+
+/* Cont styling */
+
+.cont {
+    width: clamp(300px, 50vw, 800px);
+    border: 2px solid black;
+    padding: 1rem;
+}
+
+.cont h1 {
+    text-align: center;
+}
+
+.textArea {
+    width: 100%;
+    padding: 1rem 0rem;
+    border: 1px solid blue;
+}
+
+textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    resize: none;
+    padding: 0.5rem;
+    outline: 2px solid #575757;
+    height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wordCount {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: blue;
+}
