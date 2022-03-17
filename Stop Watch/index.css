@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    --fs1: clamp(2.5rem, 10vw, 5rem);
+    --fs2: clamp(1.7rem, 6vw, 3.5rem);
+    --fs3: clamp(1.1rem, 3vw, 1.5rem);
+    background-color: purple;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont {
+    width: clamp(250px, 90vw, 700px);
+    margin: 5rem auto;
+    /* border: 2px solid black; */
+}
+
+.display {
+    background-color: purple;
+    color: white;
+    border: 2px solid white;
+    font-size: var(--fs1);
+    pointer-events: none;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#milliSec {
+    font-size: var(--fs2);
+}
+
+.btn_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn {
+    font-size: var(--fs3);
+    color: white;
+    padding: clamp(0.9rem, 2vw, 1.5rem);
+    border-radius: 10px;
+    border: 2px solid white;
+    letter-spacing: 0.2rem;
+    transition: 0.2s all ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.start {
+    background-color: green;
+}
+
+.stop {
+    background-color: red;
+}
+
+.clear {
+    background-color: blue;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.record {
+    background-color: rgb(216, 184, 0);
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: inherit;
+    cursor: pointer;
+}
+
+
+/* Recorded Time */
+
+.recordedTime {
+    margin: 4rem 0;
+    /* border: 2px solid white; */
+    padding: 0 2rem;
+}
+
+.list_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: calc(2px + var(--fs3));
+    background-color: white;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.no {
+    margin-right: 1rem;
+    display: inline-block;
+    background-color: purple;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.close {
+    margin-right: 1rem;
+    display: inline-block;
+    color: purple;
+}
+
+.close:hover {
+    cursor: pointer;
+}
