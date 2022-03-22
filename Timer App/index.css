@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s all ease-in-out;
+    box-sizing: border-box;
+}
+
+:root {
+    --fs1: clamp(2.55rem, 4vw, 2.8rem);
+    --fs2: clamp(1.4rem, 3vw, 1.6rem);
+    --fs3: clamp(1.15rem, 2vw, 1.3rem);
+}
+
+body {
+    background: whitesmoke;
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+.circle {
+    display: grid;
+    place-items: center;
+    /* border: 2px solid; */
+    border-radius: 50%;
+    height: clamp(250px, 40vw, 300px);
+    width: clamp(250px, 40vw, 300px);
+    background-color: white;
+    box-shadow: -1px 8px 23px -11px grey;
+}
+
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerContainer {
+    /* border: 2px solid red; */
+    font-size: var(--fs1);
+}
+
+.btnDiv {
+    margin: 2rem 0;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    font-size: var(--fs2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    margin: 0 1rem;
+}
+
+.btn:hover {
+    background-color: rgb(2, 2, 216);
+    cursor: pointer;
+}
+
+.clock {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(0px);
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+    padding: 0.3rem 0.2rem;
+    font-size: var(--fs3);
+    width: 3rem;
+    text-align: center;
+}
+
+
+/* Set Timer Menu Styling Over here */
+
+.setTimerMenu {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: -1px 8px 23px -11px grey;
+    border: 2px solid blue;
+    transform: translateY(-1000%);
+    width: clamp(250px, 90vw, 300px);
+    height: clamp(250px, 30vh, 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-delay: 0.2s;
+}
+
+.setTimerMenu>h1 {
+    font-size: var(--fs2);
+    text-align: center;
+}
+
+.timerDigitDiv span {
+    display: block;
+    font-size: var(--fs2);
+    color: blue;
+}
+
+.timerDigitDiv span:hover {
+    color: rgb(2, 2, 216);
+    cursor: pointer;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timerDigitDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timerMenuBtnDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timerMenuBtnDiv button {
+    font-size: var(--fs3);
+    width: 4.8rem;
+    background-color: blue;
+    border: 2px solid transparent;
+    color: white;
+    padding: 0.3rem 0;
+    border-radius: 4px;
+}
+
+.timerMenuBtnDiv button:nth-child(2):hover {
+    background-color: rgb(2, 2, 216);
+    cursor: pointer;
+}
+
+.timerMenuBtnDiv button:nth-child(1):hover {
+    border: 2px solid blue;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.timerMenuBtnDiv button:nth-child(1) {
+    border: 2px solid blue;
+    color: blue;
+    background-color: white;
+}
+
+
+/* transform: rotate3d(1, 0, 0, 359deg); */
+
+.timesUp {
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    flex-direction: column;
+    font-size: 2rem;
+    background: white;
+    color: blue;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(200px, 40vw, 300px);
+    padding: 1rem;
+    border-radius: 7px;
+    border: 2px solid blue;
+    transform: translateY(-1000%);
+    top: 50%;
+}
+
+.timesUp span {
+    display: block;
+    margin-bottom: 2rem;
+}

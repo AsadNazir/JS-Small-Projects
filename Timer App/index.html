@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./index.css">
+    <!-- Fonts Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Timer</title>
+</head>
+
+<body>
+
+    <!-- Timer Menu -->
+    <div class="setTimerMenu">
+        <h1>Set Timer</h1>
+        <div class="time">
+            <div class="timerDigitDiv"><span class="upArrows"><i class="fa-solid fa-caret-up"></i></span><input class="timerDigitDivInputs" type="number" min="0" max="23" value="00"><span class="downArrows"><i class="fa-solid fa-caret-down"></i></span></div>
+            <div class="timerDigitDiv"><span class="upArrows"><i class="fa-solid fa-caret-up"></i></span><input class="timerDigitDivInputs" type="number" min="0" max="23" value="00"><span class="downArrows"><i class="fa-solid fa-caret-down"></i></span></div>
+            <div class="timerDigitDiv"><span class="upArrows"><i class="fa-solid fa-caret-up"></i></span><input class="timerDigitDivInputs" type="number" min="0" max="59" value="00"><span class="downArrows"><i class="fa-solid fa-caret-down"></i></span></div>
+        </div>
+        <div class="timerMenuBtnDiv">
+            <button id="cancel">cancel</button><button id="set">set</button>
+        </div>
+    </div>
+    <div class="timesUp">
+        <span>Times Up</span>
+        <button class="btn">ok</button>
+    </div>
+    <!-- Timer Menu Ends Over Here -->
+    <div class="clock">
+
+
+        <div class="outerContainer">
+            <div class="circle">
+                <div class="innerContainer">
+                    <span class="digits" id="hours">00</span> : <span class="digits" id="minutes">00</span> : <span class="digits" id="seconds">00
+        </div>
+        
+        </div>
+    
+        <div class="btnDiv">
+        <button class="btn"  id="setTime"><span><i class="fa-solid fa-clock"></i></span></button>
+                    <button class="btn" id="play"><span><i class="fa-solid fa-play"></i></span></button>
+                    <button class="btn" id="reset"><span><i class="fa-solid fa-arrow-rotate-right"></i></span></button>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
